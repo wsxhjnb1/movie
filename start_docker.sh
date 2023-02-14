@@ -1,3 +1,4 @@
 #!/bin/zsh
-docker run --rm -it go_image:0.1
+docker run -v "`pwd`":/root --rm -dit go_image:0.1
+
 
