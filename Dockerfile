@@ -5,4 +5,3 @@ RUN apt install -y vim golang-go
 
 VOLUME ["/autocomplete"]
 WORKDIR /autocomplete
-
