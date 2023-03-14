@@ -12,6 +12,19 @@ func hello(w http.ResponseWriter, req *http.Request) {
     fmt.Fprintf(w, "hello\n")
 }
 
+func useelasticsearch(w http.ResponseWriter, req *http.Request){
+    resp, err := http.Get("http://www.google.com")
+    if err != nil {
+        log.Fatalln(err)
+    }
+    body, err := ioutil.ReadAll(resp.Body)
+    if err != nil {
+        log.Fatalln(err)
+    }
+    sb := string(body)
+    
+}
+
 func headers(w http.ResponseWriter, req *http.Request) {
 
     for name, headers := range req.Header {
